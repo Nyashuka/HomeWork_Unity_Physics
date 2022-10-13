@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveShell : MonoBehaviour
 {
     [SerializeField] private float _speed = 1f;
+    public float Speed => _speed;
     private void Start()
     {
         
@@ -12,6 +13,6 @@ public class MoveShell : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(0, _speed * 0.5f * Time.deltaTime, _speed * Time.deltaTime);
+        transform.Translate(0, 0, _speed * Time.deltaTime);
     }
 }
